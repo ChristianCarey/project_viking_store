@@ -36,6 +36,8 @@ group :development do
   gem 'pry-byebug'
   gem 'jazz_fingers'
   gem 'pry-rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

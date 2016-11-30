@@ -53,14 +53,16 @@ end
 # A list of states.
 STATES = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
 
-def generate_state(state)
-  state = State.new({:name => state})
-  state.save
-end
+
 
 # Generate some City records. Your Address model could have also included "city" as a string instead of a foreign key.
 def generate_city
   City.create( :name => Faker::Address.city )
+end
+
+def generate_state(state)
+  state = State.new(:name => state)
+  state.save
 end
 
 # This method selects one of a users several addresses for use setting shipping address and billing address.

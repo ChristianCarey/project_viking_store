@@ -1,0 +1,12 @@
+<table class="table table-striped">
+  <tr>
+    <th>Item</th>
+    <th>Data</th>
+  </tr>
+    <% location.most_frequent.each do |location| %>
+      <tr>
+        <td><%= location.name %></td>
+        <td><%= location.count %></td>
+      </tr>
+    <% end %>
+</table>

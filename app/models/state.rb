@@ -1,2 +1,3 @@
-class State < Location
+class State < ApplicationRecord
+  extend Location
 end

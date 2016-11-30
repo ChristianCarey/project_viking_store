@@ -1,8 +1,8 @@
 <div class="panel-body">
   <h3>All Time</h3>
-  <%= render partial: 'total_table', :locals => { num_days: nil } %>
+  <%= render partial: 'dashboards/tables/total_table', :locals => { num_days: nil } %>
   <h3>Last 30 Days</h3>
-  <%= render partial: 'total_table', :locals => { num_days: 30 } %>
+  <%= render partial: 'dashboards/tables/total_table', :locals => { num_days: 30 } %>
   <h3>Last 7 Days</h3>
-  <%= render partial: 'total_table', :locals => { num_days: 7 } %>
+  <%= render partial: 'dashboards/tables/total_table', :locals => { num_days: 7 } %>
 </div>

@@ -1,2 +1,3 @@
-class City < Location
+class City < ApplicationRecord
+  extend Location
 end

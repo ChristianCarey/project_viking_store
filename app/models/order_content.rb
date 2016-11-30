@@ -11,6 +11,6 @@ class OrderContent < ApplicationRecord
 
   def self.with_products
     # returns table of OrderContent primary key and total cost
-    select('*').joins('JOIN products ON product_id=products.id JOIN orders ON order_contents.order_id = orders.id')
+    joins('JOIN products ON product_id=products.id JOIN orders ON order_contents.order_id = orders.id')
   end
 end

@@ -1,0 +1,22 @@
+<table class="table table-striped">
+  <tr>
+    <th>Item</th>
+    <th>Data</th>
+  </tr>
+  <tr>
+    <td>Users:</td>
+    <td><%= User.count_with_days(num_days) %></td>
+  </tr>
+  <tr>
+    <td>Order:</td>
+    <td><%= Order.count_with_days(num_days, 'checkout_date') %></td>
+  </tr>
+  <tr>
+    <td>Product:</td>
+    <td><%= Product.count_with_days(num_days) %></td>
+  </tr>
+  <tr>
+    <td>Revenue:</td>
+    <td><%= number_to_currency(OrderContent.total_revenue(num_days)) %></td>
+  </tr>
+</table>

@@ -1,22 +1,8 @@
-<table class="table table-striped">
-  <tr>
-    <th>Item</th>
-    <th>Data</th>
-  </tr>
-  <tr>
-    <td>Users:</td>
-    <td><%= User.count %></td>
-  </tr>
-  <tr>
-    <td>Order:</td>
-    <td><%= Order.count %></td>
-  </tr>
-  <tr>
-    <td>Product:</td>
-    <td><%= Product.count %></td>
-  </tr>
-  <tr>
-    <td>Revenue:</td>
-    <td><%= number_to_currency(OrderContent.total_revenue) %></td>
-  </tr>
-</table>
+<div class="panel-body">
+  <h3>All Time</h3>
+  <%= render partial: 'total_table', :locals => { num_days: nil } %>
+  <h3>Last 30 Days</h3>
+  <%= render partial: 'total_table', :locals => { num_days: 30 } %>
+  <h3>Last 7 Days</h3>
+  <%= render partial: 'total_table', :locals => { num_days: 7 } %>
+</div>

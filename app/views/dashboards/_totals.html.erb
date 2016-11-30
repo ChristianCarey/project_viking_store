@@ -1,4 +1,22 @@
-Users: <%= User.count %>
-Order: <%= Order.count %>
-Product: <%= Product.count %>
-Revenue: <%= Order.total_revenue %>
+<table class="table table-striped">
+  <tr>
+    <th>Item</th>
+    <th>Data</th>
+  </tr>
+  <tr>
+    <td>Users:</td>
+    <td><%= User.count %></td>
+  </tr>
+  <tr>
+    <td>Order:</td>
+    <td><%= Order.count %></td>
+  </tr>
+  <tr>
+    <td>Product:</td>
+    <td><%= Product.count %></td>
+  </tr>
+  <tr>
+    <td>Revenue:</td>
+    <td><%= number_to_currency(OrderContent.total_revenue) %></td>
+  </tr>
+</table>
